@@ -1,0 +1,16 @@
+create database aula;
+
+create table Estado (
+codigo int primary key Auto_increment,
+nome varchar(100));
+
+create table cidade(
+codigo int primary key Auto_increment,
+nome varchar(100));
+
+alter table cidade add estado int 
+
+describe cidade;
+
+alter table cidade add constraint FK_cidade_estado foreign key(estado)
+references estado (codigo);
